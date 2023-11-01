@@ -33,11 +33,6 @@ h1{
     text-align: center;
 }
 
-.left_div, .center_div, .right_div {
-    width: 30%;
-    padding: 10px;
-
-}
 .headers{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
@@ -54,6 +49,7 @@ a{
     text-decoration: none;
     color: #000000;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 a:hover{
     color:#909490;
@@ -63,9 +59,12 @@ a:hover{
     /* ------ LEFT DIV / REDES SOCIALES ------ */
 
     .left_div{
+        width: 30%;
+        padding: 10px;
         flex-direction: column;
         margin: 1%;
         border-radius: 10px;
+        height: auto;
         
         background-color: aqua;
     }
@@ -91,6 +90,8 @@ a:hover{
     /* ------ CENTER DIV / INFORMACIÓN PERFIL ------ */
 
     .center_div {
+        width: 30%;
+        padding: 10px;
         flex-direction: column-reverse; /* Los divs hijos se apilan verticalmente */
         margin: 1%;
         border-radius: 10px;
@@ -100,7 +101,7 @@ a:hover{
     }
     image{
         background-color: aqua;
-        
+
     }
     .photo{
         position: relative;
@@ -117,7 +118,6 @@ a:hover{
         padding: 5px;
         margin: 5%;
         border-radius: 10px;
-        background-color: white;
         height: 55%;
 
     }
@@ -139,6 +139,8 @@ a:hover{
     /* ------ RIGHT DIV / PROYECTOS ------ */
 
     .right_div{
+        width: 30%;
+        padding: 10px;
         flex-direction: column; /* Los divs hijos se apilan verticalmente */
         margin: 1%;
         border-radius: 10px;
@@ -157,20 +159,61 @@ a:hover{
     }
 
     @media screen and (max-width: 768px) {
-        .back {
-            flex-direction: column; /* Cambiado a una disposición de columna */
-            width: 90%; /* Cambiado de 90% a 100% */
+
+        .back{
+            display: flex;
+            justify-content: space-between;
         }
-    
-        .left_div, .center_div, .right_div {
-            width: 100%; /* Cambiado de 100% a 100% (por si acaso) */
-        }
+
+
+        .left_div{
+            width: 30%;
+            padding: 10px;
+            flex: 1;
+            max-width: 100%;
+            overflow: auto;
         
-        a, h1, h2, h3{
-            overflow-x: auto;
-            white-space: nowrap;
+        }
+
+        .social-box{
+            flex: 1;
+            padding: 10px;
+            margin: 5%;
+            border-radius: 10px;
+        
+        
+            background-color: white;
+        }
+
+        .center_div{
+            width: 30%;
+            padding: 10px;
+            flex: 1;
+            max-width: 100%;
+            overflow: auto;
+        
         }
         .photo{
-            max-width: 100%;
+            width: 100%;
+            
         }
+
+
+
+
+
+        .right_div {
+            width: 30%;
+            padding: 10px;
+            flex: 1;
+            max-width: 100%;
+            overflow: auto;
+        
+        }
+
+        h2, h3, a, .titles{
+            word-wrap: break-word;
+        }
+
+        
     }
