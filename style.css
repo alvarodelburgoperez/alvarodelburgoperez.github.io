@@ -1,219 +1,130 @@
-/* ------ GENERAL ------ */
+body{
 
-body {
-    margin: 0;
-    background-image: url('fondo.jpg');
-
-  }
-  
-h1{
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    top: 10%;
-    color: white;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+
+    color: rgb(160, 160, 160);
 }
 
 
-/* ------ FONDO /PADRE ------ */
-
 .back{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+
+    flex-wrap: wrap;
 
     min-height: 80vh;
     margin: 0 auto;
     margin-bottom: 2%;
-    width: 75%;
-    height: auto;
+    width: 80%;
     border-radius: 10px;
     
+    color: white;
     background-color: black;
-    
-    color: white;
-    text-align: center;
+
 }
 
+.left_div{
+    flex-grow: 1; /* Esto hará que cada elemento ocupe el mismo espacio */
+    width: 30%;
+    margin: 10px;
+
+    border-radius: 10px;
+    background-color: rgb(59, 209, 29);
+}
 .headers{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
+
+.social-box{
+    background-color:white;
+    margin: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    
+    min-height: 12vh;
+    border-radius: 10px;
+}
+
+.social-titles{
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+    margin: 0 auto;
+    
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+      
+}
+
 .titles{
-    padding: 5px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;
-}
-.description{
-    color: black;
-}
-a{
-    text-decoration: none;
-    color: #000000;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
-a:hover{
-    color:#909490;
+
+.center_div{
+    flex-grow: 1;
+    width: 30%;
+    margin: 10px;
+
+    border-radius: 10px;
+    background-color: rgb(59, 209, 29);
+
+}
+
+.right_div{
+    flex-grow: 1; /* Esto hará que cada elemento ocupe el mismo espacio */
+    width: 30%;
+    margin: 10px;
+
+    border-radius: 10px;
+    background-color: rgb(59, 209, 29);
 }
 
 
-    /* ------ LEFT DIV / REDES SOCIALES ------ */
+.project-box{
+    background-color:white;
+    margin: 20px;
 
+    display: flex;
+    flex-wrap: wrap;
+    
+    min-height: 12vh;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px){
     .left_div{
-        width: 30%;
-        padding: 10px;
-        flex-direction: column;
-        margin: 1%;
-        border-radius: 10px;
-        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 50%); /* Crea dos columnas de igual tamaño */
         
-        background-color: aqua;
     }
     .social-box{
-        flex: 1;
-        padding: 10px;
-        margin: 5%;
-        border-radius: 10px;
+        margin: 5px;
     
-    
-        background-color: white;
     }
-    .social-titles{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        margin: 1%;
-    }
-
-
-
-    /* ------ CENTER DIV / INFORMACIÓN PERFIL ------ */
-
-    .center_div {
-        width: 30%;
-        padding: 10px;
-        flex-direction: column-reverse; /* Los divs hijos se apilan verticalmente */
-        margin: 1%;
-        border-radius: 10px;
-
-
-        background-color: blue;
-    }
-    image{
-        background-color: aqua;
-
-    }
-    .photo{
-        position: relative;
-        left: auto;
-
-        border-radius: 100%;
-        height: 200px;
-        width: 200px;
-        margin-top: 10px;
-
-    }
-    .information{
-        flex: 1;
-        padding: 5px;
-        margin: 5%;
-        border-radius: 10px;
-        height: 55%;
-
-    }
-
-    .register {
-        flex-grow: 1;
-        padding: 5px;
-        margin: 5%;
-        border-radius: 10px;
-        background-color: white;
+    .social-titles h4 {
+        display: none;
       }
       
-    .footer{
-        color: black;
-        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    .social-titles i {
+        margin-right: 0 auto;
+        margin: 5px;
+        
+      }
+    .left_div h2{
+        display: flex;
+        align-items: center;
     }
 
 
-    /* ------ RIGHT DIV / PROYECTOS ------ */
-
-    .right_div{
-        width: 30%;
-        padding: 10px;
-        flex-direction: column; /* Los divs hijos se apilan verticalmente */
-        margin: 1%;
-        border-radius: 10px;
 
 
-        background-color: blueviolet;
-    }
-    .project-box{
-        flex: 1;
-        padding: 10px;
-        margin: 5%;
-        border-radius: 10px;
-    
-    
-        background-color: white;
-    }
-
-    @media screen and (max-width: 768px) {
-
-        .back{
-            display: flex;
-            justify-content: space-between;
-        }
-
-
-        .left_div{
-            width: 30%;
-            padding: 10px;
-            flex: 1;
-            max-width: 100%;
-            overflow: auto;
-        
-        }
-
-        .social-box{
-            flex: 1;
-            padding: 10px;
-            margin: 5%;
-            border-radius: 10px;
-        
-        
-            background-color: white;
-        }
-
-        .center_div{
-            width: 30%;
-            padding: 10px;
-            flex: 1;
-            max-width: 100%;
-            overflow: auto;
-        
-        }
-        .photo{
-            width: 100%;
-            
-        }
-
-
-
-
-
-        .right_div {
-            width: 30%;
-            padding: 10px;
-            flex: 1;
-            max-width: 100%;
-            overflow: auto;
-        
-        }
-
-        h2, h3, a, .titles{
-            word-wrap: break-word;
-        }
-
-        
-    }
+}
