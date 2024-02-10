@@ -6,4 +6,4 @@ theme:
   nav_style: dark
 
 nav:
-  - Inicio: 'index.md'
+  - Home: 'index.md'
