@@ -1,1 +1,5 @@
 site_name: My Docs
+site_url: https://github.com/alvarodelburgoperez/alvarodelburgoperez.github.io/
+
+nav:
+  - Home: 'index.md'
